@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>벽돌깨기</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #fff; overflow: hidden; overscroll-behavior: none; }
+  body {
+    display: flex; align-items: center; justify-content: center;
+    touch-action: none; user-select: none; -webkit-user-select: none;
+    -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent;
+  }
+  /* 화면 너비·높이 중 작은 쪽에 맞춰 비율 그대로 확대/축소 */
+  canvas {
+    display: block; image-rendering: pixelated;
+    width: min(100vw, calc(100vh * 860 / 418));
+    width: min(100vw, calc(100dvh * 860 / 418));
+    height: auto; aspect-ratio: 860 / 418;
+  }
+</style>
+</head>
+<body>
+<canvas id="game" width="860" height="418"></canvas>
+<script src="assets.js"></script>
+<script src="ivy-sway.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
